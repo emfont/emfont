@@ -1,0 +1,30 @@
+{
+    "jfopenhuninn": {
+        "name": "JF Open Huninn",
+        "file": "jf-openhuninn-2.0.ttf",
+        "output": "jf-openhuninn-2.0.woff",
+        "style": "normal",
+        "weight": "400"
+    },
+    "notosanstc": {
+        "name": "Noto Sans TC",
+        "file": "NotoSansTC.ttf",
+        "output": "NotoSansTC.woff",
+        "style": "normal",
+        "weight": "400"
+    },
+    "notoseriftc": {
+        "name": "Noto Serif SC",
+        "file": "NotoSerifTC-Regular.otf",
+        "output": "NotoSerifTC-Regular.woff",
+        "style": "normal",
+        "weight": "400"
+    },
+    "genyogothic": {
+        "name": "Noto Serif SC Bold",
+        "file": "GenYoGothic-R.ttc",
+        "output": "GenYoGothic-R.woff",
+        "style": "normal",
+        "weight": "400"
+    }
+}
