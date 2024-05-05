@@ -21,7 +21,7 @@
         "weight": "400"
     },
     "genyogothic": {
-        "name": "Noto Serif SC Bold",
+        "name": "GenYoGothic",
         "file": "GenYoGothic-R.ttc",
         "output": "GenYoGothic-R.woff",
         "style": "normal",
