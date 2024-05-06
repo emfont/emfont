@@ -15,14 +15,14 @@
     },
     "notoseriftc": {
         "name": "Noto Serif SC",
-        "file": "NotoSerifTC-Regular.otf",
+        "file": "NotoSerifTC-Regular.ttf",
         "output": "NotoSerifTC-Regular.woff",
         "style": "normal",
         "weight": "400"
     },
     "genyogothic": {
         "name": "GenYoGothic",
-        "file": "GenYoGothic-R.ttc",
+        "file": "GenYoGothic-R.ttf",
         "output": "GenYoGothic-R.woff",
         "style": "normal",
         "weight": "400"
