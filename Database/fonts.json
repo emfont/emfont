@@ -4,27 +4,98 @@
         "file": "jf-openhuninn-2.0.ttf",
         "output": "jf-openhuninn-2.0.woff",
         "style": "normal",
-        "weight": "400"
+        "weight": "400",
+        "class": "emfont-jfopenhuninn",
+        "source": "https://justfont.com/huninn/"
     },
     "notosanstc": {
         "name": "Noto Sans TC",
         "file": "NotoSansTC.ttf",
         "output": "NotoSansTC.woff",
         "style": "normal",
-        "weight": "400"
+        "weight": "400",
+        "class": "emfont-notosanstc",
+        "source": "https://www.google.com/get/noto/"
     },
     "notoseriftc": {
         "name": "Noto Serif SC",
         "file": "NotoSerifTC-Regular.ttf",
         "output": "NotoSerifTC-Regular.woff",
         "style": "normal",
-        "weight": "400"
+        "weight": "400",
+        "class": "emfont-notoseriftc",
+        "source": "https://www.google.com/get/noto/"
     },
     "genyogothic": {
         "name": "GenYoGothic",
         "file": "GenYoGothic-R.ttf",
         "output": "GenYoGothic-R.woff",
         "style": "normal",
-        "weight": "400"
+        "weight": "400",
+        "class": "emfont-genyogothic",
+        "source": "https://github.com/ButTaiwan/genyog-font"
+    },
+    "gensekigothic": {
+        "name": "Gen Seki Gothic",
+        "file": "GenSekiGothicTW-R-01.ttf",
+        "output": "GenSekiGothic-R.woff",
+        "style": "normal",
+        "weight": "400",
+        "class": "emfont-gensekigothic",
+        "source": "https://github.com/ButTaiwan/genseki-font"
+    },
+    "genjyuu": {
+        "name": "Gen Jyuu",
+        "file": "GenJyuuGothic-Regular.ttf",
+        "output": "GenJyuuGothic-Regular.woff",
+        "style": "normal",
+        "weight": "400",
+        "class": "emfont-genjyuu",
+        "source": "http://jikasei.me/font/genjyuu/"
+    },
+    "taipeisanstc": {
+        "name": "Taipei Sans TC",
+        "file": "TaipeiSansTCBeta-Regular.ttf",
+        "output": "TaipeiSansTC-Regular.woff",
+        "style": "normal",
+        "weight": "400",
+        "class": "emfont-taipeisanstc",
+        "source": "https://sites.google.com/view/jtfoundry/"
+    },
+    "genyo": {
+        "name": "Gen Yo Min",
+        "file": "GenYoMinTW-R-01.ttf",
+        "output": "GenYoMin-Regular.woff",
+        "style": "normal",
+        "weight": "400",
+        "class": "emfont-genyomin",
+        "source": "https://github.com/ButTaiwan/genyo-font"
+    },
+    "genryu": {
+        "name": "Gen Ryu Min",
+        "file": "GenRyuMinTW-R-01.ttf",
+        "output": "GenRyuMin-Regular.woff",
+        "style": "normal",
+        "weight": "400",
+        "class": "emfont-genryumin",
+        "source": "https://github.com/ButTaiwan/genryu-font"
+    },
+    "genwan": {
+        "name": "Gen Wan Min",
+        "file": "GenWanMinTW-R-01.ttf",
+        "output": "GenWanMin-Regular.woff",
+        "style": "normal",
+        "weight": "400",
+        "class": "emfont-genwanmin",
+        "source": "https://github.com/ButTaiwan/genwan-font/"
+    },
+    "gensenrounded": {
+        "name": "Gen Sen Rounded",
+        "file": "GenSenRoundedTW-R-01.ttf",
+        "output": "GenSenRounded-Regular.woff",
+        "style": "normal",
+        "weight": "400",
+        "class": "emfont-gensenrounded",
+        "source": "https://github.com/ButTaiwan/gensen-font"
     }
 }
