@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:287b125899c70ffdf6be3b29193b1a59d0943db3121ab5eee4083557bf7430f7
-size 136
+# 悠哉字體
+
+version: v0.850 20/10/01
+source: https://github.com/lxgw/yozai-font
+license: OFL-1.1 license
+weight: 300, 400, 500, 700

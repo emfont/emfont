@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:280492fe773b71950c2468af8a2e7bd807e14015f2607d59a24427ed045db390
-size 132
+# 霞鶩新緻宋
+
+version: v0.921 24/05/14
+source: https://github.com/lxgw/LxgwNeoZhiSong
+license: IPA Font License 1.0
+weight: 400

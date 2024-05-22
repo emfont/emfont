@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9f3883893efde2b0b4af2571f1100089958e2621ade82e4a33b42a178cba1cd9
-size 162
+# 美積點陣體
+
+version: v1.13 2023/10/21
+source: https://github.com/ItMarki/MisekiBitmap
+license: OFL-1.1 license
+weight: 400
+
+styles: gothic(=normal), mincho

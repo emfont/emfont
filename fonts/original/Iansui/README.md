@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f66f07bf149cc09e013ba10e4e8483e8f1e89a28ecf7836a579660abc630af84
-size 106
+# 芫荽
+
+version: v1.002
+source: https://github.com/ButTaiwan/iansui
+license: OFL-1.1 license
+weight: 400
