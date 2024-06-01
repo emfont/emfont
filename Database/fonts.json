@@ -69,7 +69,6 @@
     },
     "GenJyuuGothic":
     {
-        ******"MSG":"TOO MANY fonts with the same name",
         "name": { "zh": "源柔黑體", "en": "GenJyuuGothic" },
         "style": "normal",
         "weight": [400],
