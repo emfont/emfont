@@ -131,7 +131,13 @@
     },
     "GenYoMin":
     {
-        
+        "name": { "zh": "源樣明體", "en": "GenYoMin" },
+        "style": "normal",
+        "weight": [200,300,400,500,600,700,900],
+        "class": "emfont-GenYoMin",
+        "version": "v1.1501",
+        "license": "OFL-1.1",
+        "source": "https://github.com/ButTaiwan/genyo-font/"
     },
     "Iansui":
     {
