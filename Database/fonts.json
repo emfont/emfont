@@ -250,7 +250,13 @@
     },
     "NotoSansTC":
     {
-
+        "name": { "zh": "思源黑體", "en": "Noto Sans TC" },
+        "style": "normal",
+        "weight": [100,300,400,500,700,900],
+        "class": "emfont-NotoSansTC",
+        "version": "v2.004",
+        "license": "OFL-1.1",
+        "source": "https://github.com/google/fonts/tree/main/ofl/notosanstc"
     },
     "NotoSerifTC":
     {
