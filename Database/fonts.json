@@ -1,95 +1,5 @@
 {
 
-    "notosanstc": {
-        "name": { "zh": "", "en": "Noto Sans TC" },
-        "style": "normal",  
-        "weight": [400],
-        "class": "emfont-notosanstc",
-        "version": "",
-        "license": "",
-        "source": "https://www.google.com/get/noto/"
-    },
-    "notoseriftc": {
-        "name": { "zh": "", "en": "Noto Serif TC" },
-        "style": "normal",  
-        "weight": [400],
-        "class": "emfont-notoseriftc",
-        "version": "",
-        "license": "",
-        "source": "https://www.google.com/get/noto/"
-    },
-    "genyogothic": {
-        "name": { "zh": "", "en": "GenYoGothic" },
-        "style": "normal",
-        "weight": [400],
-        "class": "emfont-genyogothic",
-        "version": "",
-        "license": "",
-        "source": "https://github.com/ButTaiwan/genyog-font"
-    },
-    "gensekigothic": {
-        "name": { "zh": "", "en": "Gen Seki Gothic" },
-        "style": "normal",
-        "weight": [400],
-        "class": "emfont-gensekigothic",
-        "version": "",
-        "license": "",
-        "source": "https://github.com/ButTaiwan/genseki-font"
-    },
-    "genjyuu": {
-        "name": { "zh": "", "en": "Gen Jyuu" },
-        "style": "normal",
-        "weight": [400],
-        "class": "emfont-genjyuu",
-        "version": "",
-        "license": "",
-        "source": "http://jikasei.me/font/genjyuu/"
-    },
-    "taipeisanstc": {
-        "name": { "zh": "", "en": "Taipei Sans TC" },
-        "style": "normal",
-        "weight": [400],
-        "class": "emfont-taipeisanstc",
-        "version": "",
-        "license": "",
-        "source": "https://sites.google.com/view/jtfoundry/"
-    },
-    "genyomin": {
-        "name": { "zh": "", "en": "Gen Yo Min" },
-        "style": "normal",
-        "weight": [400],
-        "class": "emfont-genyomin",
-        "version": "",
-        "license": "",
-        "source": "https://github.com/ButTaiwan/genyo-font"
-    },
-    "genryumin": {
-        "name": { "zh": "", "en": "Gen Ryu Min" },
-        "style": "normal",
-        "weight": [400],
-        "class": "emfont-genryumin",
-        "version": "",
-        "license": "",
-        "source": "https://github.com/ButTaiwan/genryu-font"
-    },
-    "genwanmin": {
-        "name": { "zh": "", "en": "Gen Wan Min" },
-        "style": "normal",
-        "weight": [400],
-        "class": "emfont-genwanmin",
-        "version": "",
-        "license": "",
-        "source": "https://github.com/ButTaiwan/genwan-font/"
-    },
-    "gensenrounded": {
-        "name": { "zh": "", "en": "Gen Sen Rounded" },
-        "style": "normal",
-        "weight": [400],
-        "class": "emfont-gensenrounded",
-        "version": "",
-        "license": "",
-        "source": "https://github.com/ButTaiwan/gensen-font"
-    },
     "975HazyGoSC":{
         "name": { "zh": "975 朦胧黑体", "en": "975 Hazy Go SC" },
         "style": "normal",
@@ -159,7 +69,7 @@
     },
     "GenJyuuGothic":
     {
-        "MSG":"TOO MANY fonts with the same name",
+        ******"MSG":"TOO MANY fonts with the same name",
         "name": { "zh": "源柔黑體", "en": "GenJyuuGothic" },
         "style": "normal",
         "weight": [400],
@@ -172,25 +82,37 @@
     {
         "name": { "zh": "源流明體", "en": "GenRyuMin" },
         "style": "normal",
-        "weight": [400],
+        "weight": [100,200,300,400,500,600,700],
         "class": "emfont-GenRyuMin",
-        "version": "v1.0",
+        "version": "v1.1501",
         "license": "OFL-1.1",
         "source": "https://github.com/ButTaiwan/genryu-font"
     },
     "GenSekiGothic":
     {
-
+        "name": { "zh": "源石黑體", "en": "GenSekiGothic" },
+        "style": "normal",
+        "weight": [300,400,500,700,900],
+        "class": "emfont-GenSekiGothic",
+        "version": "v1.1501",
+        "license": "OFL-1.1",
+        "source": "https://github.com/ButTaiwan/genseki-font"
     },
     "GenSenRounded":
     {
-
+        "name": { "zh": "源泉圓體", "en": "GenSenRounded" },
+        "style": "normal",
+        "weight": [200,300,400,500,700,900],
+        "class": "emfont-GenSenRounded",
+        "version": "v1.1501",
+        "license": "OFL-1.1",
+        "source": "https://github.com/ButTaiwan/gensen-font/"
     },
     "GenWanMin":
     {
         "name": { "zh": "源雲明體", "en": "GenWanMin" },
         "style": "normal",
-        "weight": [400],
+        "weight": [200,300,400,500,600],
         "class": "emfont-GenWanMin",
         "version": "v1.1501",
         "license": "OFL-1.1",
@@ -198,7 +120,13 @@
     },
     "GenYoGothic":
     {
-            
+        "name": { "zh": "源樣黑體", "en": "GenYoGothic" },
+        "style": "normal",
+        "weight": [200,300,350,400,500,700,900],
+        "class": "emfont-GenYoGothic",
+        "version": "v1.1501",
+        "license": "OFL-1.1",
+        "source": "https://github.com/ButTaiwan/genyog-font"
         
     },
     "GenYoMin":
