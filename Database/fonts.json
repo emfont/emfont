@@ -260,7 +260,13 @@
     },
     "NotoSerifTC":
     {
-
+        "name": { "zh": "思源宋體", "en": "Noto Serif TC" },
+        "style": "normal",
+        "weight": [200,300,400,500,600,700,900],
+        "class": "emfont-NotoSerifTC",
+        "version": "v1.001",
+        "license": "OFL-1.1",
+        "source": "https://fonts.google.com/noto/specimen/Noto+Serif+TC"
     },
     "PopGothicCJK-TC":
     {
