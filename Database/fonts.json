@@ -290,7 +290,13 @@
     },
     "TaipeiSansTCBeta":
     {
-
+        "name": { "zh": "台北黑體Beta", "en": "Taipei Sans TC Beta" },
+        "style": "normal",
+        "weight": [300,400,700],
+        "class": "emfont-TaipeiSansTCBeta",
+        "version": "v1.000",
+        "license": "OFL-1.1",
+        "source": "https://sites.google.com/view/jtfoundry/"
     },
     "Tiejili":
     {
