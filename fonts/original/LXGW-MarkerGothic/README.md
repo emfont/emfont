@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:41949d7eb4a7581b5c208980c29eb30a53d26a691b552a1e516ee19503e30e72
-size 126
+# 霞鶩漫黑
+
+version: v0.200 23/07/05
+source: https://github.com/lxgw/LxgwMarkerGothic
+license: OFL-1.1 license
+weight: 400

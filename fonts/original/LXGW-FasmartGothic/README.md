@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f2ef243c7acb88f0469e1235ab464929ba27885638bbace4488dd2697f4327a
-size 130
+# 霞鶩尚智黑
+
+version: v1.121 24/04/27
+source: https://github.com/lxgw/LxgwNeoXiHei
+license: IPA Font License 1.0
+weight: 400

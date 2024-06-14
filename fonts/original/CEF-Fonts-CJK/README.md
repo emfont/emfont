@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5600857a68f8f13ea93fe71d40332f2832b579a6122269d95f1878aa7dd9a313
-size 160
+# 快去寫作業 CJK 字體
+
+version: v2.16
+source: https://github.com/Partyb0ssishere/cef-fonts-cjk
+license: OFL-1.1 license
+weight: 400
+
+styles: normal, mono

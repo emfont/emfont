@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dbd505b6cd4c9f99846a9819e512fa525f4c46052efabbf6fb411977aa2cdd7c
-size 132
+# 目哉像素
+
+version: 1.0 Preview No.1 (0.91)
+source: https://github.com/DWNfonts/MuzaiPixel
+license: OFL-1.1 license
+weight: 400

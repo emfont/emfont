@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:53975cd83153a9dbb708ae58aeb0a10a63dda6931b69262a1e119c8c087d0e43
-size 113
+# 俐方體 11 號
+
+version: 1.100
+source: https://github.com/ACh-K/Cubic-11
+license: OFL-1.1 license
+weight: 400

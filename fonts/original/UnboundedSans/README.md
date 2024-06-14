@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:94aa8d5c8c63167e36d98aa62f38096c4916273abfbba313f2a880da0dca8fff
-size 130
+# 無界黑
+
+version: 1.100; 20230801
+source: https://github.com/maoken-fonts/unbounded-sans
+license: OFL-1.1 license
+weight: 900

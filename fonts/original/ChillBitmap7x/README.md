@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e1fc5f4b3da626ff2225ff66faa3e28bf42278ea5220e10ee7a88e74791dbecd
-size 349
+# 寒蟬點陣體
+
+version: v2.500
+source: https://github.com/Warren2060/ChillBitmap_7px
+license: 私有
+weight: 400
+
+license_all: These fonts are free software. Unlimited permission is granted to use, copy, and distribute them, with or without modification, either commercially or noncommercially. THESE FONTS ARE PROVIDED "AS IS" WITHOUT WARRANTY.
