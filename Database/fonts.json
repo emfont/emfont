@@ -22,7 +22,7 @@
         "name": { "zh": "快去写作业CJK", "en": "CEF Fonts CJK" },
         "style": "mono",
         "weight": [400],
-        "class": "emfont-gensenrounded",
+        "class": "emfont-gensenrounded-mono",
         "version": "v2.16",
         "license": "OFL-1.1",
         "source": "https://github.com/Partyb0ssishere/cef-fonts-cjk "
@@ -44,7 +44,7 @@
         "weight": [400],
         "class": "emfont-ChillBitmap7x",
         "version": "v2.5000",
-        "license": "",
+        "license": "OFL-1.1",
         "source": "https://github.com/Warren2060/ChillBitmap_7px"
     },
     "ChillRoundGothic":
@@ -222,7 +222,7 @@
         "name": { "zh": "霞鶩文楷", "en": "LXGW Wenkai" },
         "style": "mono",
         "weight": [300,400,700],
-        "class": "emfont-LXGW-Wenkai",
+        "class": "emfont-LXGW-Wenkai-mono",
         "version": "1.330",
         "license": "OFL-1.1",
         "source": "https://github.com/lxgw/LxgwWenKai"
