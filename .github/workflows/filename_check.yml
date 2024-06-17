@@ -1,0 +1,23 @@
+name: Check Filenames in Fonts Folder
+
+on: [push, pull_request]
+
+jobs:
+  check-filenames:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Check font filenames
+        run: |
+          # Navigate to the original folder
+          cd original
+          # Find all .ttf files and check their names
+          find . -type f -name "*.ttf" | while read filename; do
+            if [[ ! "$filename" =~ ^(./)?(normal|mono)-[0-9]{3}\.ttf$ ]]; then
+              echo "Invalid filename: $filename"
+              exit 1
+            fi
+          done
