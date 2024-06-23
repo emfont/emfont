@@ -51,7 +51,7 @@
     {
         "name": { "zh": "寒蟬圓黑體", "en": "ChillRoundGothic" },
         "style": "normal",
-        "weight": [100,200,300,400,500,700,900],
+        "weight": [100,200,300,400,450,500,700,900],
         "class": "emfont-ChillRoundGothic",
         "version": "v3.750",
         "license": "OFL-1.1",
