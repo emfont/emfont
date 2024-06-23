@@ -69,13 +69,13 @@
     },
     "GenJyuuGothic":
     {
-        "name": { "zh": "源柔黑體", "en": "GenJyuuGothic" },
+        "name": { "zh": "思源柔黑體", "en": "GenJyuuGothic" },
         "style": "normal",
-        "weight": [400],
+        "weight": [200,300,400,450,500,700,900],
         "class": "emfont-GenJyuuGothic",
         "version": "v1.0",
         "license": "OFL-1.1",
-        "source": ""
+        "source": "http://jikasei.me/font/genjyuu/"
     },
     "GenRyuMin":
     {
