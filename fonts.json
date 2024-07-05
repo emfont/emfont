@@ -9,11 +9,11 @@
         "license": "OFL-1.1",
         "source": "https://github.com/lxgw/975HazyGo"
     },
-    "CEF-Fonts-CJK":{
+    "CEFFontsCJK":{
         "name": { "zh": "快去写作业CJK", "en": "CEF Fonts CJK" },
         "style": ["normal","mono"],
         "weight": [400],
-        "class": "emfont-gensenrounded",
+        "class": "emfont-CEFFontsCJK",
         "version": "v2.16",
         "license": "OFL-1.1",
         "source": "https://github.com/Partyb0ssishere/cef-fonts-cjk "
