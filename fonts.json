@@ -11,28 +11,19 @@
     },
     "CEF-Fonts-CJK":{
         "name": { "zh": "快去写作业CJK", "en": "CEF Fonts CJK" },
-        "style": "normal",
+        "style": ["normal","mono"],
         "weight": [400],
         "class": "emfont-gensenrounded",
         "version": "v2.16",
         "license": "OFL-1.1",
         "source": "https://github.com/Partyb0ssishere/cef-fonts-cjk "
     },
-    "CEF-Fonts-CJK-mono":{
-        "name": { "zh": "快去写作业CJK", "en": "CEF Fonts CJK" },
-        "style": "mono",
-        "weight": [400],
-        "class": "emfont-gensenrounded-mono",
-        "version": "v2.16",
-        "license": "OFL-1.1",
-        "source": "https://github.com/Partyb0ssishere/cef-fonts-cjk "
-    },
-    "ChenYuLuoYan-Thin":
+    "ChenYuLuoYan":
     {
         "name": { "zh": "辰宇落雁體", "en": "ChenYuLuoYan Thin" },
         "style": "normal",
         "weight": [400],
-        "class": "emfont-ChenYuLuoYan-Thin",
+        "class": "emfont-ChenYuLuoYan",
         "version": "v1.0",
         "license": "OFL-1.1",
         "source": "https://github.com/Chenyu-otf/chenyuluoyan_thin"
@@ -210,19 +201,9 @@
     "LXGW-Wenkai":
     {
         "name": { "zh": "霞鶩文楷", "en": "LXGW Wenkai" },
-        "style": "normal",
+        "style": ["normal","mono"],
         "weight": [300,400,700],
         "class": "emfont-LXGW-Wenkai",
-        "version": "1.330",
-        "license": "OFL-1.1",
-        "source": "https://github.com/lxgw/LxgwWenKai"
-    },
-    "LXGW-Wenkai-mono":
-    {
-        "name": { "zh": "霞鶩文楷", "en": "LXGW Wenkai" },
-        "style": "mono",
-        "weight": [300,400,700],
-        "class": "emfont-LXGW-Wenkai-mono",
         "version": "1.330",
         "license": "OFL-1.1",
         "source": "https://github.com/lxgw/LxgwWenKai"
@@ -320,19 +301,9 @@
     "XiaoLaiSC":
     {
         "name": { "zh": "小賴字體", "en": "Xiaolai Font" },
-        "style": "normal",
+        "style": ["normal","mono"],
         "weight": [400],
         "class": "emfont-XiaoLaiSC",
-        "version": "v3.110",
-        "license": "OFL-1.1",
-        "source": "https://github.com/lxgw/kose-font"
-    },
-    "XiaoLaiSC-mono":
-    {
-        "name": { "zh": "小賴字體", "en": "Xiaolai Font" },
-        "style": "mono",
-        "weight": [400],
-        "class": "emfont-XiaoLaiSC-mono",
         "version": "v3.110",
         "license": "OFL-1.1",
         "source": "https://github.com/lxgw/kose-font"
