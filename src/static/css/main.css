@@ -351,7 +351,7 @@ p.slideIn {
 }
 
 .box-curved {
-    border-radius: 100rem;
+    border-radius: 2rem;
     background: #e3edf7;
     box-shadow: -4px -2px 16px 0px #fff,
         4px 2px 16px 0px rgba(136, 165, 191, 0.54);
