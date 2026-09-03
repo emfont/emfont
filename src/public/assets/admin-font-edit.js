@@ -120,6 +120,7 @@ function fillForm(font) {
 	editForm.elements.authors.value = arrayToText(font.authors);
 	editForm.elements.format.value = font.format || "ttf";
 	editForm.elements.replacementWeight.value = font.weights?.[0] || "";
+	editForm.elements.replacementPart.value = "";
 	editForm.elements.fontFile.value = "";
 	renderDemoSentences(font.demoContentId || 1);
 	previewLink.href = font.fontUrl;
@@ -269,6 +270,7 @@ editForm.addEventListener("submit", async event => {
 			payload.fileBase64 = await fileToBase64(file);
 		} else {
 			delete payload.replacementWeight;
+			delete payload.replacementPart;
 		}
 
 		const res = await fetch(`/api/admin/fonts/${encodeURIComponent(fontId)}`, {

@@ -15,6 +15,10 @@ import { logger } from "../utils/logger.js";
 import { analyseFontsInBatches } from "../utils/read-font-file/analyseFonts.js";
 import { get_bullet, get_generated_static_floders } from "../bootstrap/init.js";
 import { regenerateAllStaticFont } from "../bootstrap/fontNoMin.js";
+import {
+	fontFileName,
+	listFontPartFiles,
+} from "../utils/read-font-file/readFontBuffer.js";
 import { generateCSSMap } from "./generateCSSMap.js";
 
 const redis = new Redis(process.env.REDIS_URL);
@@ -284,14 +288,20 @@ async function updateAdminUserRole(userId, role) {
 	return serializeAdminUser(rows[0]);
 }
 
-async function syncOriginalFontToMinio({ id, weight, extension, buffer }) {
+async function syncOriginalFontToMinio({
+	id,
+	weight,
+	part = 0,
+	extension,
+	buffer,
+}) {
 	if (process.env.SYNC_WITH_MINIO !== "true") return;
 	if (!isMinioConfigured()) {
 		throw new Error("SYNC_WITH_MINIO=true, but MinIO is not configured");
 	}
 
 	const minioClient = createMinioClient();
-	const key = `original-fonts/${id}/${weight}.${extension}`;
+	const key = `original-fonts/${id}/${fontFileName(weight, part, extension)}`;
 	await minioClient.send(
 		new PutObjectCommand({
 			Bucket: process.env.MINIO_BUCKET,
@@ -303,10 +313,10 @@ async function syncOriginalFontToMinio({ id, weight, extension, buffer }) {
 	logger.info(`Synced original font to MinIO: ${key}`);
 }
 
-async function deleteOriginalFontFromMinio({ id, weight, extension }) {
+async function deleteOriginalFontFromMinio({ id, weight, part = 0, extension }) {
 	if (process.env.SYNC_WITH_MINIO !== "true" || !isMinioConfigured()) return;
 	const minioClient = createMinioClient();
-	const key = `original-fonts/${id}/${weight}.${extension}`;
+	const key = `original-fonts/${id}/${fontFileName(weight, part, extension)}`;
 	await minioClient.send(
 		new DeleteObjectCommand({
 			Bucket: process.env.MINIO_BUCKET,
@@ -475,24 +485,67 @@ async function syncCssToMinio({ id, weight, css }) {
 	logger.info(`Synced CSS to MinIO: ${key}`);
 }
 
-async function saveOriginalFontFile({ id, weight, extension, fileBase64 }) {
+async function saveOriginalFontFile({
+	id,
+	weight,
+	part = 0,
+	extension,
+	fileBase64,
+}) {
 	if (process.env.SYNC_WITH_MINIO === "true" && !isMinioConfigured()) {
 		throw new Error("SYNC_WITH_MINIO=true, but MinIO is not configured");
 	}
 	const fontDir = path.join(originalFontsDir, id);
 	const fontBuffer = Buffer.from(fileBase64, "base64");
+	const existingParts = listFontPartFiles(id, weight);
+	if (part > 0 && !existingParts.some(file => file.part === 0)) {
+		throw new Error(`Upload the primary file ${fontFileName(weight, 0, extension)} before part ${part}`);
+	}
 
-	await syncOriginalFontToMinio({ id, weight, extension, buffer: fontBuffer });
+	await syncOriginalFontToMinio({
+		id,
+		weight,
+		part,
+		extension,
+		buffer: fontBuffer,
+	});
 	await mkdir(fontDir, { recursive: true });
-	await writeFile(path.join(fontDir, `${weight}.${extension}`), fontBuffer);
+	await writeFile(
+		path.join(fontDir, fontFileName(weight, part, extension)),
+		fontBuffer,
+	);
 
+	// Uploading a primary file resets the weight, so stale split parts from a previous upload must go too.
+	const stale = [];
 	for (const oldExtension of fontExtensions) {
-		if (oldExtension === extension) continue;
-		await rm(path.join(fontDir, `${weight}.${oldExtension}`), {
+		if (oldExtension !== extension) stale.push({ part, extension: oldExtension });
+	}
+	if (part === 0) {
+		for (const file of existingParts) {
+			if (file.part > 0) stale.push({ part: file.part, extension: file.type });
+		}
+	}
+	for (const file of stale) {
+		await rm(path.join(fontDir, fontFileName(weight, file.part, file.extension)), {
 			force: true,
 		});
-		await deleteOriginalFontFromMinio({ id, weight, extension: oldExtension });
+		await deleteOriginalFontFromMinio({
+			id,
+			weight,
+			part: file.part,
+			extension: file.extension,
+		});
 	}
+}
+
+// Split-file index: empty/0 means the primary `<weight>.<ext>`, n >= 1 means `<weight>-<n>.<ext>`.
+function normalizeFontPart(value) {
+	if (value === undefined || value === null || value === "") return 0;
+	const part = Number(value);
+	if (!Number.isInteger(part) || part < 0 || part > 99) {
+		throw new Error("Part must be an integer between 0 and 99");
+	}
+	return part;
 }
 
 function normalizeTextArray(value) {
@@ -588,7 +641,8 @@ function normalizeReplacementFont(body) {
 	if (!fontExtensions.includes(extension)) {
 		throw new Error("Only ttf and otf fonts are supported");
 	}
-	return { weight, extension, fileBase64: body.fileBase64 };
+	const part = normalizeFontPart(body.replacementPart);
+	return { weight, part, extension, fileBase64: body.fileBase64 };
 }
 
 function assertDemoSentencePayload(body) {
@@ -600,10 +654,12 @@ function assertDemoSentencePayload(body) {
 async function saveFontRecord(body) {
 	const id = body.id.trim();
 	const weight = Number(body.weight);
+	const part = normalizeFontPart(body.part);
 	const extension = normalizeFontExtension(body.extension);
 	await saveOriginalFontFile({
 		id,
 		weight,
+		part,
 		extension,
 		fileBase64: body.fileBase64,
 	});
@@ -635,7 +691,7 @@ async function saveFontRecord(body) {
 			repo_url = EXCLUDED.repo_url,
 			authors = EXCLUDED.authors,
 			demo_content_id = EXCLUDED.demo_content_id,
-			format = EXCLUDED.format
+			format = CASE WHEN $16::boolean THEN EXCLUDED.format ELSE font_family.format END
 		`,
 		[
 			id,
@@ -653,6 +709,7 @@ async function saveFontRecord(body) {
 			normalizeTextArray(body.authors),
 			Number(body.demoContentId || 1),
 			extension,
+			part === 0,
 		],
 	);
 
@@ -679,7 +736,8 @@ async function updateFontRecord(id, body) {
 			id,
 			...replacementFont,
 		});
-		body.format = replacementFont.extension;
+		// Split parts may differ in extension; the download link follows the primary file.
+		if (replacementFont.part === 0) body.format = replacementFont.extension;
 	}
 
 	await db.query(
